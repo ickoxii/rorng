@@ -135,12 +135,12 @@ void generate_random_loadout(void)
     const char *primary2 =
       get_random_ability(selected_survivor.abilities.primary, MAX_ABILITIES);
 
-    printf("  Primary: %s, %s\n", primary1, primary2);
+    printf("  Primary:   %s, %s\n", primary1, primary2);
   } else {
     const char *primary =
       get_random_ability(selected_survivor.abilities.primary, MAX_ABILITIES);
 
-    printf("  Primary: %s\n", primary);
+    printf("  Primary:   %s\n", primary);
   }
 
   // Generate secondary
@@ -151,7 +151,7 @@ void generate_random_loadout(void)
   // Generate utility
   const char *utility =
     get_random_ability(selected_survivor.abilities.utility, MAX_ABILITIES);
-  printf("  Utility: %s\n", utility);
+  printf("  Utility:   %s\n", utility);
 
   // Handle special case: Captain can have multiple specials
   if (strcmp(selected_survivor.name, "Captain") == 0) {
@@ -160,11 +160,11 @@ void generate_random_loadout(void)
     const char *special2 =
       get_random_ability(selected_survivor.abilities.special, MAX_ABILITIES);
 
-    printf("  Special: %s, %s\n", special1, special2);
+    printf("  Special:   %s, %s\n", special1, special2);
   } else {
     const char *special =
       get_random_ability(selected_survivor.abilities.special, MAX_ABILITIES);
 
-    printf("  Special: %s\n", special);
+    printf("  Special:   %s\n", special);
   }
 }
